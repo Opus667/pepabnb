@@ -2,8 +2,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="shadow-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-4">
+    <header className="shadow-md">
+      <div className="sm:px8 mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         <div className="flex items-center">
           <img
             className="h-10"
@@ -13,7 +13,7 @@ const Header = () => {
           <p className="text-primary-400 text-2xl font-bold">ashbnb</p>
         </div>
 
-        <div className="flex items-center rounded-full border border-gray-300 px-4 py-2 pr-4 pl-6 shadow-md">
+        <div className="hidden items-center rounded-full border border-gray-300 px-4 py-2 pr-4 pl-6 shadow-md lg:flex">
           <p className="border-r border-r-gray-300 pr-4">Qualquer lugar</p>
           <p className="border-r border-r-gray-300 px-4">Qualquer semana</p>
           <p className="px-4">Hóspedes</p>
@@ -60,10 +60,10 @@ const Header = () => {
               clipRule="evenodd"
             />
           </svg>
-          <p className="">Pepa 667</p>
+          <p className="max-w-20 truncate sm:max-w-32">Pepa 667 wwwwwwwwwww</p>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
