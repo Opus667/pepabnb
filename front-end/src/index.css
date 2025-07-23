@@ -2,4 +2,7 @@
 
 @theme {
   --color-primary-400: #ff385c;
+  --font-hashbnb:
+    Airbnb, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+    sans-serif;
 }
