@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ user }) => {
   return (
     <header className="shadow-md">
       <div className="sm:px8 mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
@@ -39,7 +39,7 @@ const Header = () => {
           </div>
         </Link>
         <Link
-          to="/login"
+          to={user ? "/account" : "/login"}
           className="flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2 pr-4 pl-6 shadow-md"
         >
           <svg
@@ -67,7 +67,11 @@ const Header = () => {
               clipRule="evenodd"
             />
           </svg>
-          <p className="max-w-20 truncate sm:max-w-32">Pepa 667 wwwwwwwwwww</p>
+          {user ? (
+            <p className="max-w-20 truncate sm:max-w-32">{user.name}</p>
+          ) : (
+            <></>
+          )}
         </Link>
       </div>
     </header>
