@@ -68,7 +68,7 @@ const Header = ({ user }) => {
             />
           </svg>
           {user ? (
-            <p className="max-w-20 truncate sm:max-w-32">kkk{user.name}</p>
+            <p className="max-w-20 truncate sm:max-w-32">{user.name}</p>
           ) : (
             <></>
           )}
