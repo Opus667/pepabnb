@@ -16,7 +16,7 @@ const Header = ({ user }) => {
 
         <Link
           to="/"
-          className="hidden items-center rounded-full border border-gray-300 px-4 py-2 pr-4 pl-6 shadow-md lg:flex"
+          className="hidden items-center rounded-full border border-gray-300 px-4 py-2 pr-4 pl-6 shadow-md lg:flex dark:border-gray-600"
         >
           <p className="border-r border-r-gray-300 pr-4">Qualquer lugar</p>
           <p className="border-r border-r-gray-300 px-4">Qualquer semana</p>
@@ -40,7 +40,7 @@ const Header = ({ user }) => {
         </Link>
         <Link
           to={user ? "/account" : "/login"}
-          className="flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2 pr-4 pl-6 shadow-md"
+          className="flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2 pr-4 pl-6 shadow-md dark:border-gray-600"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

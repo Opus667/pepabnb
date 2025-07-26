@@ -10,7 +10,7 @@ const Item = () => {
       />
       <div>
         <h3 className="text-xl font-semibold">sorocaba sp</h3>
-        <p className="truncate text-gray-600">
+        <p className="truncate text-gray-600 dark:text-gray-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
           ipsam, accusamus corrupti veritatis rem modi ullam doloremque expedita
           animi velit saepe nihil excepturi deleniti suscipit quidem dignissimos

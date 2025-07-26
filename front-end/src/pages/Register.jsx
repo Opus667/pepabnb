@@ -11,21 +11,22 @@ const Register = ({ setUser }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // if (email && password) {
-    //   try {
-    //     const { data: userDoc } = await axios.post("/users/login", {
-    //       email,
-    //       password,
-    //     });
+    if (email && password && name) {
+      try {
+        const { data: userDoc } = await axios.post("/users", {
+          name,
+          email,
+          password,
+        });
 
-    //     setUser(userDoc);
-    //     setRedirect(true);
-    //   } catch (error) {
-    //     alert(`erro ao logar; ${error.response.data}`);
-    //   }
-    // } else {
-    //   alert("preencha tudo!!!");
-    // }
+        setUser(userDoc);
+        setRedirect(true);
+      } catch (error) {
+        alert(`erro ao cadastrar;${JSON.stringify(error)}`);
+      }
+    } else {
+      alert("preencha tudo!!!");
+    }
   };
 
   if (redirect) return <Navigate to="/" />;
@@ -37,26 +38,26 @@ const Register = ({ setUser }) => {
         <form className="flex w-full flex-col gap-2" onSubmit={handleSubmit}>
           <input
             type="text"
-            className="w-full rounded-full border border-gray-300 px-4 py-2"
+            className="w-full rounded-full border border-gray-300 px-4 py-2 dark:border-gray-600"
             placeholder="Digite seu nome"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             type="email"
-            className="w-full rounded-full border border-gray-300 px-4 py-2"
+            className="w-full rounded-full border border-gray-300 px-4 py-2 dark:border-gray-600"
             placeholder="Digite seu e-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
-            className="w-full rounded-full border border-gray-300 px-4 py-2"
+            className="w-full rounded-full border border-gray-300 px-4 py-2 dark:border-gray-600"
             placeholder="Digite sua senha"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="bg-primary-400 hover:bg-primary-500 w-full cursor-pointer rounded-full border border-gray-300 px-4 py-2 font-bold text-white">
+          <button className="bg-primary-400 hover:bg-primary-500 w-full cursor-pointer rounded-full border border-gray-300 px-4 py-2 font-bold text-white dark:border-gray-600">
             Registrar
           </button>
         </form>
